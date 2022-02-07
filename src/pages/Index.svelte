@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex flex-row items-center justify-center">
-    <div class="bg-slate-50 w-[550px] rounded-md py-12 px-5">
+    <div class="bg-slate-50 w-[550px] rounded-md py-12 px-5 shadow-md">
         <Today />
         <Checkbox label={label}/>
         <h1 class="text-3xl font-bold underline font-mono">Hello {name}!</h1>
