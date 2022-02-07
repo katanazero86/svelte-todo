@@ -1,8 +1,8 @@
 <script lang="ts">
     import {fade} from 'svelte/transition';
 
-    let checked = false;
-    export let label;
+    let checked: boolean = false;
+    export let label: string | undefined;
 </script>
 
 <label class="checkbox">
@@ -47,12 +47,13 @@
     }
 
     .checkbox__check > svg {
-        color: #6366f1;
+        color: #9a78d6;
     }
 
     .checkbox > .checkbox__label {
-        padding-left: 12px;
-        font-size: 18px;
+        padding-left: 14px;
+        padding-top: 4px;
+        font-size: 16px;
         font-weight: 500;
         letter-spacing: -0.2px;
         width: 100%;

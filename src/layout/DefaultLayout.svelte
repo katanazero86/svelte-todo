@@ -10,15 +10,15 @@
 </script>
 
 <main class="default-layout">
-    <h1>test</h1>
     <Route {currentRoute} {queryParams}/>
 </main>
 
 <style>
     .default-layout {
-        height: 100%;
+        height: 100vh;
         background: linear-gradient(
                 160deg
-                , #e3ddf0, #8e6bcf);
+                ,#f8deff, #8e6bcf);
+        padding: 0 4px;
     }
 </style>

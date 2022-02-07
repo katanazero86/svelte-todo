@@ -10,12 +10,14 @@
 
 </script>
 
-<div class="flex flex-row items-center justify-between text-slate-800">
-    <div class="text-base flex flex-row items-center">
-        <p class="font-bold text-4xl">
-            {date}
-        </p>
-        <div class="pl-2 text-sm leading-none">
+<div class="flex items-center justify-between text-slate-800 px-5">
+    <div class="flex">
+        <div class="pt-[2px]">
+            <p class="font-bold text-4xl">
+                {date}
+            </p>
+        </div>
+        <div class="pl-2 text-sm flex flex-col justify-start">
             <p class="font-semibold">
                 {month}
             </p>
@@ -24,8 +26,10 @@
             </p>
         </div>
     </div>
-    <div class="font-semibold text-sm">
-        {day}
+    <div class="text-sm">
+        <p class="font-semibold">
+            {day}
+        </p>
     </div>
 </div>
 
