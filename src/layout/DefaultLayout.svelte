@@ -9,7 +9,16 @@
     queryParams = {...currentRoute.queryParams};
 </script>
 
-<div>
+<main class="default-layout">
     <h1>test</h1>
     <Route {currentRoute} {queryParams}/>
-</div>
+</main>
+
+<style>
+    .default-layout {
+        height: 100%;
+        background: linear-gradient(
+                160deg
+                , #e3ddf0, #8e6bcf);
+    }
+</style>
