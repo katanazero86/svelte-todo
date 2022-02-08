@@ -3,6 +3,7 @@
 
     let checked: boolean = false;
     export let label: string | undefined;
+    export let isDone: boolean | undefined;
 </script>
 
 <label class="checkbox">

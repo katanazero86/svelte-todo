@@ -1,7 +1,7 @@
 <script lang="ts">
-
-    const handleClick = () => {
-        alert('add..');
+    export let handleAddTodoClick: () => void;
+    const handleClick: () => void = () => {
+        if (handleAddTodoClick) handleAddTodoClick();
     }
 </script>
 
