@@ -1,11 +1,10 @@
 <script lang="ts">
     import {Route} from 'svelte-router-spa';
-    import type {CurrentRouteInterface} from "../interfaces/CurrentRouteInterface";
+    import type {CurrentRouteInterface} from "../types/CurrentRouteInterface";
 
     export let currentRoute: CurrentRouteInterface;
     let params: object = {};
     let queryParams: object = {};
-    console.log(currentRoute);
     queryParams = {...currentRoute.queryParams};
 </script>
 
@@ -17,8 +16,7 @@
     .default-layout {
         height: 100vh;
         background: linear-gradient(
-                160deg
-                ,#f8deff, #8e6bcf);
+                160deg, #f8deff, #8e6bcf);
         padding: 0 4px;
     }
 </style>

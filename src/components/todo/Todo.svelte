@@ -47,9 +47,10 @@
     </div>
 </div>
 
-<AddTodoModal isShow={isShow}
-              handleModalCloseClick={handleModalCloseClick}
-              handleModalConfirmClick={handleModalConfirmClick}/>
+{#if isShow}
+    <AddTodoModal handleModalCloseClick={handleModalCloseClick}
+                  handleModalConfirmClick={handleModalConfirmClick}/>
+{/if}
 
 <style>
     .todo-btn {
