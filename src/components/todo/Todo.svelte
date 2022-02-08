@@ -21,8 +21,8 @@
             return false;
         }
         const targetPayload = {
-            idx : 1,
-            todo : targetTodo,
+            idx: 1,
+            todo: targetTodo,
             isDone: false,
         }
         await createTodoCollection(targetPayload);
@@ -39,8 +39,8 @@
         <TodoTab/>
     </div>
     <div class="h-80 max-h-full overflow-auto px-5">
-        <Item />
-        <Item />
+        <Item/>
+        <Item/>
     </div>
     <div class="todo-btn">
         <TodoAddBtn handleAddTodoClick={handleAddTodoClick}/>
