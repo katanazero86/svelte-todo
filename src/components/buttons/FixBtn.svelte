@@ -8,7 +8,7 @@
 
 <button on:click={handleClick}
         type="button"
-        class="text-gray-400 bg-transparent hover:bg-gray-200 can-hover:hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+        class="text-gray-400 bg-transparent hover:bg-gray-200 touch:can-hover:hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
         <g>
             <rect fill="none" height="24" width="24" x="0"/>
