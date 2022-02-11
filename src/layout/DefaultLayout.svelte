@@ -1,8 +1,8 @@
 <script lang="ts">
     import {Route} from 'svelte-router-spa';
 
-    export let currentRoute;
-    export let params;
+    export let currentRoute: any;
+    export let params: any;
 </script>
 
 <main class="default-layout">

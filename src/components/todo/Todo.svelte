@@ -80,7 +80,7 @@
             createdAt: new Date(),
         };
         try {
-            const resultDocRefId = await createTodoCollection(targetPayload);
+            const resultDocRefId: string = await createTodoCollection(targetPayload);
         } catch (error) {
             console.error(error);
             console.error('createTodoCollection error..');
@@ -106,7 +106,7 @@
             todo: newTodo,
         };
         try {
-            const resultDocRefId = await updateTodoTodo(targetPayload);
+            await updateTodoTodo(targetPayload);
         } catch (error) {
             console.error(error);
             console.error('updateTodoTodo error..');
@@ -178,7 +178,7 @@
             <Loading/>
         {:then targetTodos}
             {#if targetTodos.length !== 0}
-                {#each targetTodos as todoObj, i}
+                {#each targetTodos as todoObj}
                     <Item targetTodo={todoObj}
                           updateIsDone={updateIsDone}
                           fixTodo={fixTodo}

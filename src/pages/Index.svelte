@@ -1,7 +1,7 @@
 <script lang="ts">
     import Todo from "../components/todo/Todo.svelte";
-    export let currentRoute;
-    export let params;
+    export let currentRoute: any;
+    export let params: any;
 </script>
 
 <div class="flex flex-row items-center justify-center index">

@@ -1,3 +1,56 @@
+# svelte-todo
+
+---
+
+> ### svelte todo 소개 <br/>
+> Svelte.js, Typescript, Firebase, Rollup, PostCSS, HTML5, CSS3, Tailwind CSS
+> - Owner & Maintainer
+> - github. [https://github.com/katanazero86/svelte-todo](https://github.com/katanazero86/svelte-todo)
+> - Todo 를 추가, 수정, 삭제, isDone 처리가 가능하며, Firebase 에서 제공해주는 Cloud Firestore 를 사용하여 데이터를 관리합니다.
+
+---
+
+> ### project 정보 <br/>
+> - [sveltejs/template](https://github.com/sveltejs/template) 을 이용하여 rollup 번들러를 사용하는 초기 프로젝트 생성, Svelte 를 이용하여 Todo 웹앱 제작 및 Vercel 배포
+> - Tailwind CSS v3 를 사용하여, 스타일링 / Typescript 사용 / Firebase 사용 / 라우팅 처리를 위한 svelte-router-spa 패키지 사용
+> - 프로젝트 실행방법(execution)
+> ```
+> node moudle install : npm i or npm install
+> dev : npm run dev
+> build : npm run build
+> ```
+
+---
+
+> ### project 배포(deploy) <br/>
+> - https://vercel.com/ - 버셀 클라우드 플랫폼을 이용하여 배포
+> - 버셀 가입 후, github 저장소 연동
+> - URL: https://svelte-todo-six.vercel.app/
+
+---
+
+> ### 구조 및 규약
+
+```
+/src/main.ts : Svelte 의 시작점(App.svelte 를 가져와서 App 인스턴스 생성 후, DOM 에 마운트 합니다.)
+/src/rollup.confug.js : rollup 번들러 설정 및 entry point 를 등록(main.ts)
+/src/firebase/firebase.ts : firebase 연동을 위한 설정과 초기화 코드
+/src/firebase/repositories/ : 데이터베이스에 접근하는 함수들을 사용하기 위한 코드를 관리하는 폴더 
+/src/firebase/types/ : 특정 repository 또는 데이터베이스에 필요한 type 을 관리하는 폴더
+/src/components/ : Svelte 컴포넌트를 관리하는 폴더
+/src/layout/ : 페이지당 사용할 layout 컴포넌트를 관리하는 폴더
+/src/pages/ : Svelte page 컴포넌트를 관리하는 폴더
+
+
+- 컴포넌트(Example.svelte)명은 대문자로 시작 
+- module 패턴으로 작성된 코드는 *Module 로 표기
+- on:eventname 인 부분은 이벤트 바인딩이며, bind:property 부분은 속성에 값을 바인딩 합니다.
+eventname: handleEvent or handleSubjectEvent
+
+```
+
+---
+
 *Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
 
 *Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)*

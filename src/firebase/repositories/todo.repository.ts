@@ -45,7 +45,7 @@ export const updateTodoIsDone = async (targetPayload: TodoInterface) => {
     }, {merge: true})
 };
 
-export const deleteTodoByDocId = async (targetDocId) => {
+export const deleteTodoByDocId = async (targetDocId: string) => {
     return await deleteDoc(doc(firestore, COLLECTION_NAME, targetDocId));
 };
 

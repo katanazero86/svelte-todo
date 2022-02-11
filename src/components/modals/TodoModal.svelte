@@ -23,8 +23,8 @@
         }
     });
 
-    const handleKeyup: (e) => void = e => {
-        if (e.keyCode === 13) {
+    const handleKeyup: (e: KeyboardEvent) => void = e => {
+        if (e.key === 'Enter') {
             if (isFix) {
                 handleFixClick();
             } else {
@@ -64,7 +64,6 @@
                     <input bind:value={todo}
                            bind:this={targetInputEl}
                            on:keyup={handleKeyup}
-                           autofocus
                            type="text"
                            class="text-sm bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-3 px-4 text-gray-900 leading-tight focus:outline-none focus:bg-white focus:border-violet-300"
                            placeholder="Your Todo"

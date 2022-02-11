@@ -12,7 +12,7 @@
         activeTab = TAB_ITEMS[0];
     });
 
-    const handleTabClick = targetTab => () => {
+    const handleTabClick: (targetTab: string) => () => void = targetTab => () => {
         activeTab = targetTab;
         if(handleTabChange) handleTabChange(targetTab);
     };

@@ -1,7 +1,7 @@
 <script lang="ts">
     const DAY: readonly string[] = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
     const MONTH: readonly string[] = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-    const today: object = new Date();
+    const today: Date = new Date();
 
     const year: number = today.getFullYear();
     const month: string = MONTH[today.getMonth()];
