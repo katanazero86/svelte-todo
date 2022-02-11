@@ -23,39 +23,37 @@
     let targetFixTodo: TodoInterface | undefined;
     let todos: Promise<TodoInterface[] | void> = Promise.resolve([]);
 
+    const ALL = 'ALL';
+    const DONE = 'DONE';
+
     onMount(() => {
-        currentTabValue = 'ALL';
-        initTodosByAll();
+        currentTabValue = ALL;
+        initTodos();
     });
 
-    const initTodosByAll = () => {
-        return todos = findTodoCollection().catch(error => {
-            console.error(error);
-            console.error('findTodoCollection error..');
-        });
-    };
-
-    const initTodosByDone = () => {
-        return todos = findTodoCollectionByDone().catch(error => {
-            console.error(error);
-            console.error('findTodoCollectionByDone error..');
-        });
+    const initTodos = () => {
+        switch (currentTabValue) {
+            case ALL :
+                return todos = findTodoCollection().catch(error => {
+                    console.error(error);
+                    console.error('findTodoCollection error..');
+                });
+            case DONE:
+                return todos = findTodoCollectionByDone().catch(error => {
+                    console.error(error);
+                    console.error('findTodoCollectionByDone error..');
+                });
+            default:
+                return todos = findTodoCollection().catch(error => {
+                    console.error(error);
+                    console.error('findTodoCollection error..');
+                });
+        }
     };
 
     const handleTabChange: (tabValue: string) => void = (tabValue) => {
-        switch (tabValue) {
-            case 'ALL' :
-                currentTabValue = tabValue;
-                initTodosByAll();
-                break;
-            case 'DONE' :
-                currentTabValue = tabValue;
-                initTodosByDone();
-                break;
-            default :
-                currentTabValue = 'ALL';
-                initTodosByAll();
-        }
+        currentTabValue = tabValue;
+        initTodos();
     };
 
     const handleAddTodoClick: () => void = () => {
@@ -89,16 +87,9 @@
             isDisabled = false;
         }
 
-        if (currentTabValue === 'ALL') {
-            initTodosByAll().finally(() => {
-                isDisabled = false;
-            });
-        } else {
-            initTodosByDone().finally(() => {
-                isDisabled = false;
-            });
-        }
-
+        initTodos().finally(() => {
+            isDisabled = false;
+        });
         handleModalCloseClick();
     };
 
@@ -122,17 +113,10 @@
             isDisabled = false;
         }
 
-        if (currentTabValue === 'ALL') {
-            initTodosByAll().finally(() => {
-                isDisabled = false;
-            });
-        } else {
-            initTodosByDone().finally(() => {
-                isDisabled = false;
-            });
-        }
+        initTodos().finally(() => {
+            isDisabled = false;
+        });
         handleModalCloseClick();
-
     };
 
     const updateIsDone: (updateTargetTodo: TodoInterface, isDone: boolean) => void = async (updateTargetTodo, isDone) => {
@@ -171,15 +155,9 @@
                 console.error(error);
                 console.error('deleteTodoByDocId error..');
             }
-            if (currentTabValue === 'ALL') {
-                initTodosByAll().finally(() => {
-                    isDisabled = false;
-                });
-            } else {
-                initTodosByDone().finally(() => {
-                    isDisabled = false;
-                });
-            }
+            initTodos().finally(() => {
+                isDisabled = false;
+            });
         }
     };
 

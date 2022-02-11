@@ -1,8 +1,9 @@
 <script lang="ts">
     export let handleFixClick: () => void;
+
     const handleClick: () => void = () => {
         if (handleFixClick) handleFixClick();
-    }
+    };
 </script>
 
 <button on:click={handleClick}

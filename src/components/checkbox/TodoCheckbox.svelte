@@ -1,13 +1,12 @@
 <script lang="ts">
     import {fade} from 'svelte/transition';
-    import type {TodoInterface} from "../../firebase/types/todo.types";
+    import type {TodoInterface} from '../../firebase/types/todo.types';
 
     export let targetTodo: TodoInterface;
-
+    export let handleIsDoneChange: (updateTargetTodo, isDone) => void;
     let label: string | undefined = targetTodo.todo;
     let isDone: boolean | undefined = targetTodo.isDone;
     let id: string | undefined = targetTodo.id;
-    export let handleIsDoneChange: (updateTargetTodo, isDone) => void;
 
     const handleChange = e => {
         if (handleIsDoneChange) handleIsDoneChange(targetTodo, e.target.checked);
