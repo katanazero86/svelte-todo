@@ -164,7 +164,7 @@
 </script>
 
 
-<div class="bg-slate-50 w-[550px] h-[600px] relative rounded-md py-12 shadow-md">
+<div class="bg-slate-50 w-full max-w-[550px] h-[600px] relative rounded-md py-12 shadow-md">
     <div transition:scale class="pb-4">
         <Today/>
     </div>

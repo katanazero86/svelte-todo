@@ -15,5 +15,6 @@
         background: linear-gradient(
                 160deg, #f8deff, #8e6bcf);
         padding: 0 4px;
+        overflow: auto;
     }
 </style>
