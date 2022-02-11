@@ -20,7 +20,7 @@
 </script>
 
 <div class="flex flex-row items-center justify-between cursor-pointer divide-x divide-slate-200">
-    <div class={`basis-1/2 flex justify-center can-hover:hover:bg-violet-50 py-3 border-b border-transparent ${activeTab !== TAB_ITEMS[0] && noActiveClass}`}
+    <div class={`basis-1/2 flex justify-center touch:can-hover:hover:bg-violet-50 py-3 border-b border-transparent ${activeTab !== TAB_ITEMS[0] && noActiveClass}`}
          on:click={handleTabClick(TAB_ITEMS[0])}>
         <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 0 20 20"
              width="34" fill={activeTab === TAB_ITEMS[0] ? activeColor : noActiveColor}>
@@ -28,7 +28,7 @@
             <path d="M18,7.5h-7V6h7V7.5z M18,12.5h-7V14h7V12.5z M3.06,5.11L2,6.17L4.83,9l4.6-4.6L8.36,3.34L4.83,6.88L3.06,5.11z M3.06,11.61 L2,12.67l2.83,2.83l4.6-4.6L8.36,9.84l-3.54,3.54L3.06,11.61z"/>
         </svg>
     </div>
-    <div class={`basis-1/2 flex justify-center can-hover:hover:bg-violet-50 py-3 border-b border-transparent ${activeTab !== TAB_ITEMS[1] && noActiveClass}`}
+    <div class={`basis-1/2 flex justify-center touch:can-hover:hover:bg-violet-50 py-3 border-b border-transparent ${activeTab !== TAB_ITEMS[1] && noActiveClass}`}
          on:click={handleTabClick(TAB_ITEMS[1])}>
         <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 0 24 24" width="34" fill={activeTab === TAB_ITEMS[1] ? activeColor : noActiveColor}>
             <path d="M0 0h24v24H0V0z" fill="none"/>

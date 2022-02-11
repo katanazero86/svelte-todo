@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {},
     screens: {
-      touch: {'raw': 'hover: none'},
+      touch: {'raw': '(hover: none)'},
       'can-hover': {'raw': '(hover: hover)'},
     }
   },
