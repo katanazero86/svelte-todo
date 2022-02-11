@@ -4,7 +4,7 @@ module.exports = {
     extend: {},
     screens: {
       touch: {'raw': 'hover: none'},
-      'can-hover': {'raw': 'hover: hover'},
+      'can-hover': {'raw': '(hover: hover)'},
     }
   },
   plugins: [],
