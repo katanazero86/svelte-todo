@@ -1,5 +1,6 @@
 export interface TodoInterface {
-    idx: number | string;
-    todo: string;
-    isDone: boolean;
+    id?: string;
+    todo?: string;
+    isDone?: boolean;
+    createdAt?: Date;
 }

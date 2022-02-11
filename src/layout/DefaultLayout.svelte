@@ -1,15 +1,12 @@
 <script lang="ts">
     import {Route} from 'svelte-router-spa';
-    import type {CurrentRouteInterface} from "../types/CurrentRouteInterface";
 
-    export let currentRoute: CurrentRouteInterface;
-    let params: object = {};
-    let queryParams: object = {};
-    queryParams = {...currentRoute.queryParams};
+    export let currentRoute;
+    export let params;
 </script>
 
 <main class="default-layout">
-    <Route {currentRoute} {queryParams}/>
+    <Route {currentRoute}/>
 </main>
 
 <style>

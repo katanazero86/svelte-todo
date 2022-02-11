@@ -1,15 +1,24 @@
 <script lang="ts">
     import {fade} from 'svelte/transition';
+    import type {TodoInterface} from "../../firebase/types/todo.types";
 
-    let checked: boolean = false;
-    export let label: string | undefined;
-    export let isDone: boolean | undefined;
+    export let targetTodo: TodoInterface;
+
+    let label: string | undefined = targetTodo.todo;
+    let isDone: boolean | undefined = targetTodo.isDone;
+    let id: string | undefined = targetTodo.id;
+    export let handleIsDoneChange: (updateTargetTodo, isDone) => void;
+
+    const handleChange = e => {
+        if (handleIsDoneChange) handleIsDoneChange(targetTodo, e.target.checked);
+    };
+
 </script>
 
 <label class="checkbox">
-    <input type="checkbox" bind:checked={checked}/>
+    <input type="checkbox" bind:checked={isDone} on:change={handleChange} value={id}/>
     <span class="checkbox__check">
-        {#if checked}
+        {#if isDone}
             <svg transition:fade={{duration: 200}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="15"
                  height="15">
         <path stroke="currentColor" fill="currentColor" fill-rule="nonzero" stroke-width="1.5"
@@ -17,7 +26,7 @@
         </svg>
             {/if}
     </span>
-    <p class="checkbox__label">{label}</p>
+    <p class={`checkbox__label ${isDone && 'line-through'}`}>{label}</p>
 </label>
 
 <style>
