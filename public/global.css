@@ -47,3 +47,15 @@ body {
 * {
     box-sizing: border-box;
 }
+
+.scroll-custom::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll-custom::-webkit-scrollbar-track  {
+    background: #f5f3ff;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+    background: #ddd6fe;
+}

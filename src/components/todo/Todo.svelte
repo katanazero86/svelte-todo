@@ -168,12 +168,20 @@
     <div transition:scale class="pb-4">
         <Today/>
     </div>
+    {#await todos}
+    {:then targetTodos}
+        {#if targetTodos.length !== 0}
+            <div transition:scale class="px-5 pb-4">
+                <p class="text-sm font-semibold text-right">{targetTodos.length} Task</p>
+            </div>
+        {/if}
+    {/await}
     <div class="pb-4">
         <TodoTab
                 handleTabChange={handleTabChange}
         />
     </div>
-    <div class="h-80 max-h-full overflow-auto px-5">
+    <div class="h-80 max-h-full overflow-auto px-5 scroll-custom">
         {#await todos}
             <Loading/>
         {:then targetTodos}
