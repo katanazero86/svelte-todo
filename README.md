@@ -3,7 +3,7 @@
 ---
 
 > ### svelte todo 소개 <br/>
-> Svelte.js, Typescript, Firebase, Rollup, PostCSS, HTML5, CSS3, Tailwind CSS
+> Svelte.js, Firebase, Rollup, PostCSS, Tailwind CSS, HTML5, CSS3, Javascript, Typescript
 > - Owner & Maintainer
 > - github. [https://github.com/katanazero86/svelte-todo](https://github.com/katanazero86/svelte-todo)
 > - Todo 를 추가, 수정, 삭제, isDone 처리가 가능하며, Firebase 에서 제공해주는 Cloud Firestore 를 사용하여 데이터를 관리합니다.
